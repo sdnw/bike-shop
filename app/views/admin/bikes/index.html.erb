@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Bikes" %>
+
+<h1>Bikes</h1>
+
+<ul>
+  <% @bikes.each do |bike| %>
+    <li><%= link_to bike.name, bike_path(bike) %></li>
+  <% end %>
+</ul>
+
+<div id="admin_bikes">
+  <% @admin_bikes.each do |admin_bike| %>
+    <%= render admin_bike %>
+    <p>
+      <%= link_to "Show this bike", admin_bike %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New bike", new_admin_bike_path %>

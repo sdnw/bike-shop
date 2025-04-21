@@ -1,0 +1,11 @@
+<!-- app/views/bikes/index.html.erb -->
+<h1>Our Bike Catalog</h1>
+<ul>
+  <% @bikes.each do |bike| %>
+    <li>
+      <strong><%= bike.name %></strong>
+      — Category: <%= bike.category.capitalize %>,
+      Price: <%= number_to_currency(bike.price) %>
+    </li>
+  <% end %>
+</ul>

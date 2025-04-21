@@ -1,0 +1,11 @@
+<% content_for :title, "New bike" %>
+
+<h1>New bike</h1>
+
+<%= render "form", admin_bike: @admin_bike %>
+
+<br>
+
+<div>
+  <%= link_to "Back to bikes", admin_bikes_path %>
+</div>

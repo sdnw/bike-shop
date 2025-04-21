@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @admin_bike %>
+<h1><%= @bike.name %></h1>
+<p>Category: <%= @bike.category.capitalize %></p>
+<p>Price: <%= number_to_currency(@bike.price) %></p>
+
+<div>
+  <%= link_to "Edit this bike", edit_admin_bike_path(@admin_bike) %> |
+  <%= link_to "Back to bikes", admin_bikes_path %>
+
+  <%= button_to "Destroy this bike", @admin_bike, method: :delete %>
+</div>

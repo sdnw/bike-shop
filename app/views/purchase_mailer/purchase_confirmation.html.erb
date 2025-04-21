@@ -1,0 +1,5 @@
+<!-- app/views/purchase_mailer/purchase_confirmation.html.erb -->
+<p>Hi <%= @purchase.user.email %>,</p>
+<p>Thank you for purchasing the <%= @purchase.bike.name %>!</p>
+<p>Quantity: <%= @purchase.quantity %></p>
+<p>Total: $<%= @purchase.total_price %></p>
